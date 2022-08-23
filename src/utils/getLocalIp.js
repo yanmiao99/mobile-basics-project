@@ -8,9 +8,9 @@ function getNetworkIp() {
         // console.log("network",network)
         for (let dev in network) {
 
-            let iface = network[dev];
-            for (let i = 0; i < iface.length; i++) {
-                let alias = iface[i];
+            let face = network[dev];
+            for (let i = 0; i < face.length; i++) {
+                let alias = face[i];
                 if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
                     needHost = alias.address;
                     // console.log("alias.address",alias.address)

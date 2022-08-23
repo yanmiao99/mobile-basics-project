@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite';
 import {VantResolver} from 'unplugin-vue-components/resolvers';
 import pxToViewPort from "postcss-px-to-viewport"
-import getNetworkIp from "./src/utils/getIP"
+import getLocalIp from "./src/utils/getLocalIp"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -48,7 +48,7 @@ export default defineConfig({
     },
     base: './', //打包相对路径
     server: {
-        host: getNetworkIp,	// 本机的局域网IP
+        host: getLocalIp,	// 本机的局域网IP
         port: 2333, //指定端口号
         proxy: {
             // '/user': {
