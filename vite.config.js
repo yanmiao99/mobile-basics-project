@@ -16,8 +16,13 @@ export default defineConfig({
             }
         ),
         Components({
-            resolvers: [VantResolver(
-                {
+            resolvers: [VantResolver()],
+        }),
+    ],
+    css: {
+        postcss: {
+            plugins: [
+                pxToViewPort({
                     // 只配置这两项也能正常使用
                     unitToConvert: 'px', // 要转化的单位
                     viewportWidth: 375, // UI设计稿的宽度
@@ -35,14 +40,7 @@ export default defineConfig({
                     landscape: true, // 是否处理横屏情况
                     landscapeUnit: 'vw', // (String) 横屏时使用的单位
                     landscapeWidth: '1334' // (Number) 横屏时使用的视口宽度
-                }
-            )],
-        }),
-    ],
-    css: {
-        postcss: {
-            plugins: [
-                pxToViewPort()
+                })
             ]
         }
     },

@@ -5,7 +5,7 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/style/global.scss'
-import request from "./utils/require";
+import request from "./utils/request";
 
 const app = createApp(App)
 
