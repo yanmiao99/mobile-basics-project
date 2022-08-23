@@ -10,7 +10,7 @@ import getLocalIp from "./src/utils/getLocalIp"
 export default defineConfig({
     plugins: [vue({
         refTransform: true, // 配置可使用 $ref 进行定义变量
-        // reactivityTransform: true
+        reactivityTransform: true
     }), Components({
         resolvers: [VantResolver()],
     }),], css: {
